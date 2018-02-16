@@ -16,4 +16,8 @@ class S05_PROVINGGROUNDS_API UMyBTTaskNode : public UBTTaskNode
 
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override; // TODO perhaps change protection level
 
+protected:
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector IndexKey;
+
 };
